@@ -5,8 +5,10 @@
 class Square:
     "square class"
     def __init__(self, size=0):
-        self. _Square__size = size
-        if size =={}:
-            print('size must be an integer')
+        if type(size) != int:
+            raise TypeError('size must be an integer')
         elif size < 0 :
-            print('size must be >= 0')
+            raise ValueError('size must be >= 0')
+        else :
+            self. _Square__size = size
+            
