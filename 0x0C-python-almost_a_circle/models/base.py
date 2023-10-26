@@ -8,7 +8,9 @@ class Base:
 
     def __init__(self, id=None):
         """
-        this is init method
+        init - initialization
+        Args:
+            id: object id
         """
         if id is not None:
             self.id = id
