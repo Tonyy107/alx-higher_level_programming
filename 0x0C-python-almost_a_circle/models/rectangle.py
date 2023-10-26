@@ -17,7 +17,6 @@ class Rectangle(Base):
             height: it just a height
             x: it equal to 0
             y: it equal to 0 too
-            id: objects id
         """
         self.width = width
         self.height = height
