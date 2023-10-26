@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 #base calss
 
 class Base:
