@@ -41,7 +41,7 @@ class Rectangle(Base):
                 raise ValueError("{} must be > 0".format(name_of_att))
         elif input < 0:
             raise ValueError("{} must be >= 0".format(name_of_att))
-        
+      
     @property
     def width(self):
         """ width getter """
