@@ -3,7 +3,6 @@
 """
 rectangle class
 """
-from pickle import TRUE
 from models.base import Base
 
 
