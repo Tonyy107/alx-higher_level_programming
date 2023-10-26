@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """
-this is base class
+ base this is base class
 """
 
 class Base:
+    """
+    Base class
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
