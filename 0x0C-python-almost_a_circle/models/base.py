@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-#base calss
+"""
+this is base class
+"""
 
 class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        #this is init method
+        """
+        this is init method
+        """
         if id is not None:
             self.id = id
         else:
