@@ -3,6 +3,7 @@
 """
 rectangle class
 """
+from pickle import TRUE
 from models.base import Base
 
 
@@ -26,6 +27,22 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def checker(self, input, name_of_att, wihe=True):
+        """
+        checker - method to check inputs
+        Args:
+            input: the variable that goona be checked
+            name_of_att: name of the variable
+            wihe: width or height
+        """
+        if not isinstance(input, int):
+            raise TypeError("{} must be an integer".format(name_of_att))
+        if wihe:
+            if input <= 0:
+                raise ValueError("{} must be > 0".format(name_of_att))
+        elif input < 0:
+            raise ValueError("{} must be >= 0".format(name_of_att))
+        
     @property
     def width(self):
         """ width getter """
@@ -34,6 +51,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         """ width setter """
+        self.checker(width, "width",)
         self.__width = width
 
     @property
@@ -44,6 +62,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         """ height setter """
+        self.checker(height, "height")
         self.__height = height
 
     @property
@@ -54,6 +73,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         """ x setter """
+        self.checker(x, "x", False)
         self.__x = x
 
     @property
@@ -64,4 +84,5 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         """ y setter """
+        self.checker(y, "y", False)
         self.__y = y
