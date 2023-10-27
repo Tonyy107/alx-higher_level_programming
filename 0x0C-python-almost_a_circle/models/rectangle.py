@@ -30,7 +30,13 @@ class Rectangle(Base):
         """
         str - it return string
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id,
+            self.x,
+            self.y,
+            self.width,
+            self.height
+            )
 
     def checker(self, input, name_of_att, wihe=True):
         """
