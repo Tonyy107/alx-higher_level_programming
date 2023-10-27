@@ -116,3 +116,12 @@ class Rectangle(Base):
             for j in range(self.width):
                 print("#", end="")
             print()
+
+    def update(self, *args):
+        """
+        update - to update variables
+        """
+        lst = (self.id, self.width, self.height, self.x, self.y)
+        if args:
+            self.id, self.width, self.height, self.x, self.y = \
+                args + lst[len(args):len(lst)]
