@@ -97,6 +97,6 @@ class Rectangle(Base):
         display: method to display the shape of rectangle
         """
         for i in range(self.height):
-            for l in range(self.width):
-                print("#",end="")
+            for j in range(self.width):
+                print("#", end="")
             print()
