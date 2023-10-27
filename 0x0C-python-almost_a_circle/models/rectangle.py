@@ -86,5 +86,5 @@ class Rectangle(Base):
         self.checker(y, "y", False)
         self.__y = y
 
-    def area(self, width, height):
-        return width * height
+    def area(self):
+        return self.width * self.height
