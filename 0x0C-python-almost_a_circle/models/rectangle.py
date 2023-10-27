@@ -125,3 +125,6 @@ class Rectangle(Base):
         if args:
             self.id, self.width, self.height, self.x, self.y = \
                 args + lst[len(args):len(lst)]
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
