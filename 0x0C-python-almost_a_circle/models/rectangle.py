@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
-"""
-rectangle class
-"""
+"""rectangle module"""
 from models.base import Base
 
 
