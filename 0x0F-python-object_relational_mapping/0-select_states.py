@@ -1,29 +1,18 @@
 #!/usr/bin/python3
-"""Lists all states from the database hbtn_0e_0_usa"""
-
+"""
+0-select_states module
+"""
 import MySQLdb
 import sys
 
-def list_states(username, password, database_name):
-    # Establish a connection to the MySQL server
-    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database_name)
+if __name__ == '__main__':
+    db = MySQLdb.connect(host='localhost', port=3306,
+                         user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
-    # Create a cursor object to execute SQL queries
-    cursor = db.cursor()
-
-    # Execute the SELECT query
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-
-    # Fetch all the rows returned by the query
-    rows = cursor.fetchall()
-
-    # Iterate over the rows and print each state
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
     for row in rows:
         print(row)
-
-    # Close the cursor and the database connection
-    cursor.close()
+    cur.close()
     db.close()
-
-# Call the list_states function with the provided arguments
-list_states(sys.argv[1], sys.argv[2], sys.argv[3])
