@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"this is square class"
+"""this is square class"""
 
 
 class Square:
-    "square class"
+    """square class"""
     def __init__(self, size=0):
-        "init method"
+        """init method"""
         if type(size) != int:
             raise TypeError('size must be an integer')
         elif size < 0:
