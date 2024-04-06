@@ -6,7 +6,8 @@ class Square:
     """ defines a function named __init__ """
     def __init__(self, size=0):
         """ if statement """
-        if isinstance(size) != int:
+        a = isinstance(size,int)
+        if a == False:
             """ raise an error """
             raise TypeError("size must be an integer")
         elif size < 0:
