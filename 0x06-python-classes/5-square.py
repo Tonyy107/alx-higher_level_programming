@@ -29,7 +29,10 @@ class Square:
 
     def my_print(self):
         """ print method """
-        for a in range(self.__size):
-            for e in range(self.__size):
-                print("#", end="")
-            print("\n", end="")
+        if self.__size == 0:
+            print("")
+        else:
+            for a in range(self.__size):
+                for e in range(self.__size):
+                    print("#", end="")
+                print("\n", end="")
