@@ -31,5 +31,5 @@ class Square:
         """ print method """
         for a in range(self.__size):
             for e in range(self.__size):
-                print("#",end="")
-            print("\n",end="")
+                print("#", end="")
+            print("\n", end="")
