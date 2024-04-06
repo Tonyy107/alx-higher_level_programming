@@ -9,8 +9,7 @@ class Square:
         """
         Args:
             size: size of square
-        """
-        
+        """        
         if type(size) != int:
             raise TypeError('size must be an integer')
         elif size < 0:
