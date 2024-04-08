@@ -33,7 +33,7 @@ class Square:
         a = isinstance(value[0], int)
         b = isinstance(value[1], int)
         c = isinstance(value, tuple)
-        if a and b and c and value[0] >= 0 and value[1] >= 0:
+        if c and value[0] >= 0 and value[1] >= 0:
             self.__position = value
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
