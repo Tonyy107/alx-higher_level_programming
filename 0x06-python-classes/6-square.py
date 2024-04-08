@@ -50,4 +50,5 @@ class Square:
         for i in range(self.__position[1]):
             print()
         for a in range(self.__size):
-            pass
+            print("".join([" " for k in range(self.__position[0])]), end="")
+            print("".join(["#" for z in range(self.__size)]))
