@@ -4,6 +4,7 @@
 
 class Square:
     """ defines a function named __init__ """
+
     def __init__(self, size=0, position=(0, 0)):
         """ init """
         self.__size = size
