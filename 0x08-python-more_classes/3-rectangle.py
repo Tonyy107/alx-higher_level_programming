@@ -52,4 +52,4 @@ class Rectangle:
             for e in range(self.__width):
                 print("#", end="")
             print()
-        return rec
+        return ("".join(rec))
