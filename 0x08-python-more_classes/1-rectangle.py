@@ -2,7 +2,7 @@
 """ rectangle module """
 
 
-class Rectangle(object):
+class Rectangle:
     """ rectangle class """
 
     def __init__(self, width=0, height=0):
