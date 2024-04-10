@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-Rectangle = __import__('0-rectangle').Rectangle
+Rectangle = __import__('1-rectangle').Rectangle
 
-my_rectangle = Rectangle()
-print(type(my_rectangle))
-print(my_rectangle.__dict__)
+my_rectangle = Rectangle(2, 4)
+print("{} - {}".format(my_rectangle.width, my_rectangle.height))
+my_rectangle.height = 10
+print("{} - {}".format(my_rectangle.width, my_rectangle.height))
