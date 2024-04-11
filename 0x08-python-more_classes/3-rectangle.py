@@ -47,9 +47,12 @@ class Rectangle:
     def __str__(self):
         if self.__height <= 0 or self.__width <= 0:
             return ("")
-        rec = []
+        
+        rect = []
         for a in range(self.__height):
             for e in range(self.__width):
-                print("#", end="")
-            print()
-        return ("".join(rec))
+                rect.append("#")
+            rect.append("\n")
+
+        return ("".join(rect))
+    
