@@ -52,7 +52,7 @@ class Rectangle:
         for a in range(self.__height):
             for e in range(self.__width):
                 rect.append("#")
-            rect.append("\n")
-
+            if a != self.__height -1:
+                rect.append("\n")
         return ("".join(rect))
     
