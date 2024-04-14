@@ -8,7 +8,7 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        Rectangle.number_of_instances += 1
+        type(self).number_of_instances += 1
         self.height = height
         self.width = width
 
@@ -80,5 +80,5 @@ class Rectangle:
         return rect
 
     def __del__(self):
-        Rectangle.number_of_instances -= 1
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
