@@ -6,7 +6,6 @@ class Rectangle:
     """ rectangle class """
     number_of_instances = 0
     print_symbol = "#"
-    # exception_occured = False
 
     def __init__(self, width=0, height=0):
         type(self).number_of_instances += 1
@@ -87,5 +86,4 @@ class Rectangle:
 
     def __del__(self):
         type(self).number_of_instances -= 1
-        # if self.exception_occured is False:
         print("Bye rectangle...")
