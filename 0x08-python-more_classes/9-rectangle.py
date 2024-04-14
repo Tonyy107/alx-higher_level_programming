@@ -6,11 +6,12 @@ class Rectangle:
     """ rectangle class """
     number_of_instances = 0
     print_symbol = "#"
+    exception_occured = False
 
     def __init__(self, width=0, height=0):
         type(self).number_of_instances += 1
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
@@ -24,8 +25,10 @@ class Rectangle:
     def width(self, value):
         """ width setter """
         if isinstance(value, int) is not True:
+            self.exception_occured = True
             raise TypeError("width must be an integer")
         if value < 0:
+            self.exception_occured = True
             raise ValueError("width must be >= 0")
         self.__width = value
 
@@ -33,8 +36,10 @@ class Rectangle:
     def height(self, value):
         """ height setter """
         if isinstance(value, int) is not True:
+            self.exception_occured = True
             raise TypeError("height must be an integer")
         if value < 0:
+            self.exception_occured = True
             raise ValueError("height must be >= 0")
         self.__height = value
 
@@ -82,4 +87,5 @@ class Rectangle:
 
     def __del__(self):
         type(self).number_of_instances -= 1
-        print("Bye rectangle...")
+        if self.exception_occured == False:
+            print("Bye rectangle...")
