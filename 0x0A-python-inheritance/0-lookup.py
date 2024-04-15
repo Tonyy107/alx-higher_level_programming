@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-"""lookup method"""
+"""lookup module"""
 def lookup(obj):
+    """lookup method"""
     return dir(obj)
