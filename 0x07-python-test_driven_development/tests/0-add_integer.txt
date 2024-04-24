@@ -13,9 +13,9 @@ Checking for module docstring:
 	 True
 
 Checking for function docstring:
-	 >>> f = __import__("0-add_integer").add_integer.__doc__
-         >>> len(f) > 1
-         True
+	>>> f = __import__("0-add_integer").add_integer.__doc__
+    >>> len(f) > 1
+    True
 
 Checking regular addition:
 	 >>> add_integer(2, 3)
