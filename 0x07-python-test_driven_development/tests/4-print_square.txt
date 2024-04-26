@@ -4,7 +4,7 @@ The ``4-print_square`` module
 Using ``print_square``
 -------------------
 Importing function from module:
-    >>> print_square = __import__("4-print_square").say_my_name
+    >>> print_square = __import__("4-print_square").print_square
 
 Checking for module docstring:
     >>> n = __import__("4-print_square").__doc__
@@ -12,7 +12,12 @@ Checking for module docstring:
     True
 
 Checking for function docstring:
-    >>> m = __import__("4-print_square").say_my_name.__doc__
+    >>> m = __import__("4-print_square").print_square.__doc__
     >>> len(m) > 1
     True
 
+test1:
+    >>> print_square()
+    Traceback (most recent call last):
+    ....
+    TypeError: print_square() missing 1 required positional argument: 'size'
