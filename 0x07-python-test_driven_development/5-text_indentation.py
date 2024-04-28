@@ -12,5 +12,4 @@ def text_indentation(text):
         if text[x] in ".?:":
             x += 1
             print("\n")
-
         x += 1
