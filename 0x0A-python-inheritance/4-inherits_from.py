@@ -9,4 +9,4 @@ def inherits_from(obj, a_class):
     class; otherwise False.
     """
     return isinstance(obj, a_class) and \
-        not obj.__class__ is a_class
+        obj.__class__ is not a_class
