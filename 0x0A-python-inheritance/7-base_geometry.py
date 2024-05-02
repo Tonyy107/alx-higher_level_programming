@@ -56,7 +56,7 @@ class BaseGeometry:
     Returns:
         None
     """
-        if name is str:
+        if type(name) is str:
             if type(value) is not int:
                 raise TypeError(f"{name} must be an integer")
             if value <= 0:
