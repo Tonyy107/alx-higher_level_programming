@@ -77,7 +77,9 @@ Testing for only 1 argument to integer_validator:
 	 TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
 Testing for too many arguments:
-	 >>> b.integer_validator("integer", 1, 2)
-	 Traceback (most recent call last):
-         ...
-	 TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+	>>> b.integer_validator("integer", 1, 2)
+	Traceback (most recent call last):
+	...
+	TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+
+>>> b.integer_validator("my_int", 12)
