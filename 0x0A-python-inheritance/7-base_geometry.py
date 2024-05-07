@@ -37,8 +37,7 @@ class BaseGeometry(Base):
     Returns:
         None
     """
-        if type(name) is str:
-            if type(value) is not int:
-                raise TypeError(f"{name} must be an integer")
-            if value <= 0:
-                raise ValueError(f"{name} must be greater than 0")
+        if type(value) is not int:
+            raise TypeError("{:s} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{:s} must be greater than 0".format(name))
