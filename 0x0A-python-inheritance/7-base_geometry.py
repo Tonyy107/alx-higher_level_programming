@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ 7-base_geometry module """
-Base = __import__('6-base_geometry').BaseGeometry
 
-class BaseGeometry(Base):
+
+class BaseGeometry:
 
     """
     A base class for geometric shapes.
@@ -16,6 +16,10 @@ class BaseGeometry(Base):
     None
 
     """
+
+    def area(self):
+        """Not yet implemented."""
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
