@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
- Module that holds the class Rectangle
+ Module that holds
+ the class Rectangle
 """
 BaseGeometry = __import__("7-base_geometry.py").BaseGeometry
 
