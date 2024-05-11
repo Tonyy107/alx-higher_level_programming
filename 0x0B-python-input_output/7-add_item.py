@@ -8,7 +8,8 @@ try:
     b = load_from_json_file("add_item.json")
 except FileNotFoundError:
     b = []
-b = load_from_json_file("add_item.json")
+if os.path.exists("add_item.json"):
+    b = load_from_json_file("add_item.json")
 a = sys.argv[1:]
 b.extend(a)
 
