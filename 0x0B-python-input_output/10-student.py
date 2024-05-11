@@ -25,7 +25,7 @@ class Student:
             dict: A dictionary containing the student's attributes.
         """
         if type(attrs) is list and \
-        all(type(lol) is str for lol in attrs):
+                all(type(lol) is str for lol in attrs):
             lols = {}
             for lol in attrs:
                 if hasattr(self, lol):
