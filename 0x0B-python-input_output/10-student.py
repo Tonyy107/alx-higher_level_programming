@@ -22,9 +22,12 @@ class Student:
         Returns a dictionary representation of the student.
 
         Args:
-            attrs (list): Optional list of attributes to include in the dictionary.
-                          If provided, only the specified attributes will be included.
-                          If not provided, all attributes will be included.
+            attrs (list): Optional list of attributes to
+                          include in the dictionary.
+                          If provided, only the specified
+                          attributes will be included.
+                          If not provided, all attributes
+                          will be included.
 
         Returns:
             dict: A dictionary containing the student's attributes.
