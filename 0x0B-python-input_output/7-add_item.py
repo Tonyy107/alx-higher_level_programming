@@ -8,8 +8,8 @@ save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 try:
     load_from_json_file("add_item.json")
 except FileNotFoundError:
-    argss = []
+    b = []
+a = sys.argv[1:]
+b.extend(a)
 
-argss.extend(sys.argv[1:])
-
-save_to_json_file(argss, "add_item.json")
+save_to_json_file(b, "add_item.json")
