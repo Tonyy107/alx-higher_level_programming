@@ -41,3 +41,6 @@ class Student:
                     lols[lol] = getattr(self, lol)
             return lols
         return self.__dict__
+
+    def reload_from_json(self, json):
+        
