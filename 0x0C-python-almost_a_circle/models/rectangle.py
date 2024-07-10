@@ -90,10 +90,10 @@ class Rectangle(Base):
         Display the rectangle by printing '#' characters in
         the shape of the rectangle.
         """
-        for f in range(self.x):
+        for f in range(self.y):
             print()
         for i in range(self.height):
-            for a in range(self.y):
+            for a in range(self.x):
                 print(" ", end="")
             for e in range(self.width):
                 print("#", end="")
