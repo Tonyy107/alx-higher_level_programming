@@ -63,6 +63,15 @@ class Rectangle(Base):
                 if atr < 0:
                     raise ValueError(f"{name_atr} must be >= 0")
 
+    def area(self):
+            """
+            Calculate the area of the rectangle.
+
+            Returns:
+                The area of the rectangle.
+            """
+            return self.width * self.height
+
     @property
     def width(self):
         """
@@ -79,7 +88,7 @@ class Rectangle(Base):
         Sets the width of the rectangle.
 
         Args:
-            value (int): The new width of the rectangle.
+            width (int): The new width of the rectangle.
         """
         self.checker("width", width, True)
         self.__width = width
@@ -100,7 +109,7 @@ class Rectangle(Base):
         Sets the height of the rectangle.
 
         Args:
-            value (int): The new height of the rectangle.
+            height (int): The new height of the rectangle.
         """
         self.checker("height", height, True)
         self.__height = height
@@ -121,7 +130,10 @@ class Rectangle(Base):
         Sets the x-coordinate of the rectangle's position.
 
         Args:
-            value (int): The new x-coordinate of the rectangle's position.
+            x (int): The new x-coordinate of the rectangle's position.
+
+        Returns:
+            None
         """
         self.checker("x", x, False)
         self.__x = x
@@ -142,7 +154,7 @@ class Rectangle(Base):
         Sets the y-coordinate of the rectangle's position.
 
         Args:
-            value (int): The new y-coordinate of the rectangle's position.
+            y (int): The new y-coordinate of the rectangle's position.
         """
         self.checker("y", y, False)
         self.__y = y
