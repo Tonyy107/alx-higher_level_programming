@@ -35,6 +35,10 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def __str__(self):
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
+{self.width}/{self.height}"
+
     def checker(self, name_atr, atr, hewi=True):
         """
         Check the validity of an attribute value.
