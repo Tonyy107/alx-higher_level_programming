@@ -22,9 +22,12 @@ class Rectangle(Base):
         Args:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
-            x (int, optional): The x-coordinate of the rectangle's position. Defaults to 0.
-            y (int, optional): The y-coordinate of the rectangle's position. Defaults to 0.
-            id (int, optional): The unique identifier of the rectangle. Defaults to None.
+            x (int, optional): The x-coordinate of the rectangle's position.
+                Defaults to 0.
+            y (int, optional): The y-coordinate of the rectangle's position.
+                Defaults to 0.
+            id (int, optional): The unique identifier of the rectangle.
+                Defaults to None.
         """
         self.__width = width
         self.__height = height
