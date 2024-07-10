@@ -1,8 +1,22 @@
 #!/usr/bin/python3
 """ Base class """
+
+
 class Base:
+    """
+    The Base class serves as the base class for other classes in the project.
+    It provides a unique identifier for each instance created.
+    """
+
     __nb_objects = 0
+
     def __init__(self, id=None):
+        """
+        Initializes a new instance of the Base class.
+
+        Args:
+            id (int): The unique identifier for the instance. If not provided, a new identifier will be assigned.
+        """
         if id is not None:
             self.id = id
         else:
