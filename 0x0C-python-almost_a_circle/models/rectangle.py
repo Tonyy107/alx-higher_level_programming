@@ -35,6 +35,34 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
+    def checker(self, name_atr, atr, hewi=True):
+        """
+        Check the validity of an attribute value.
+
+        Args:
+            name_atr (str): The name of the attribute being checked.
+            atr (int): The value of the attribute being checked.
+            hewi (bool, optional): Flag indicating whether the attribute
+            must be greater than zero. Defaults to True.
+
+        Raises:
+            TypeError: If the attribute is not an integer.
+            ValueError: If the attribute is not valid based on
+            the specified conditions.
+
+        Returns:
+            None
+        """
+        if not isinstance(atr, int):
+            raise TypeError(f"{name_atr} must be an integer")
+        else:
+            if hewi:
+                if atr <= 0:
+                    raise ValueError(f"{name_atr} must be > 0")
+            if not hewi:
+                if atr < 0:
+                    raise ValueError(f"{name_atr} must be >= 0")
+
     @property
     def width(self):
         """
@@ -46,14 +74,15 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, value):
+    def width(self, width):
         """
         Sets the width of the rectangle.
 
         Args:
             value (int): The new width of the rectangle.
         """
-        self.__width = value
+        self.checker("width", width, True)
+        self.__width = width
 
     @property
     def height(self):
@@ -66,14 +95,15 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, value):
+    def height(self, height):
         """
         Sets the height of the rectangle.
 
         Args:
             value (int): The new height of the rectangle.
         """
-        self.__height = value
+        self.checker("height", height, True)
+        self.__height = height
 
     @property
     def x(self):
@@ -86,14 +116,15 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, value):
+    def x(self, x):
         """
         Sets the x-coordinate of the rectangle's position.
 
         Args:
             value (int): The new x-coordinate of the rectangle's position.
         """
-        self.__x = value
+        self.checker("x", x, False)
+        self.__x = x
 
     @property
     def y(self):
@@ -106,11 +137,12 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, value):
+    def y(self, y):
         """
         Sets the y-coordinate of the rectangle's position.
 
         Args:
             value (int): The new y-coordinate of the rectangle's position.
         """
-        self.__y = value
+        self.checker("y", y, False)
+        self.__y = y
