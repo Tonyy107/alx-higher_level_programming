@@ -29,10 +29,10 @@ class Rectangle(Base):
             id (int, optional): The unique identifier of the rectangle.
                 Defaults to None.
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     def checker(self, name_atr, atr, hewi=True):
