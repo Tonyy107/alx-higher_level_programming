@@ -36,6 +36,15 @@ class Rectangle(Base):
         super().__init__(id)
 
     def __str__(self):
+        """
+        Returns a string representation of the Rectangle object.
+
+        The string includes the object's ID, coordinates (x, y), width,
+        and height.
+
+        Returns:
+            str: A string representation of the Rectangle object.
+        """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
 {self.width}/{self.height}"
 
