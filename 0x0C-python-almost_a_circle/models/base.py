@@ -15,7 +15,8 @@ class Base:
         Initializes a new instance of the Base class.
 
         Args:
-            id (int): The unique identifier for the instance. If not provided, a new identifier will be assigned.
+            id (int): The unique identifier for the instance. If not provided,
+            a new identifier will be assigned.
         """
         if id is not None:
             self.id = id
