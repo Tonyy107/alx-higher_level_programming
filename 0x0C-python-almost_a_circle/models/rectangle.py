@@ -99,7 +99,7 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Updates the attributes of the Rectangle instance.
 
@@ -107,11 +107,20 @@ class Rectangle(Base):
             *args: Variable length argument list containing the new values
                    for the attributes in the following order: id, width,
                    height, x, y.
+            **kwargs: Keyword arguments containing the new values for the
+                      attributes. The attribute names should be used as the
+                      keyword arguments.
+
+        Returns:
+            None
         """
         args_name = ['id', 'width', 'height', 'x', 'y']
         for i, arg in enumerate(args):
             if i < len(args_name):
                 setattr(self, args_name[i], arg)
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     @property
     def width(self):
