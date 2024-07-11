@@ -100,18 +100,19 @@ class Rectangle(Base):
             print()
 
     def update(self, *args):
-            """
-            Updates the attributes of the Rectangle instance.
+        """
+        Updates the attributes of the Rectangle instance.
 
-            Args:
-                *args: Variable length argument list containing the new values
-                       for the attributes in the following order: id, width,
-                       height, x, y.
-            """
-            args_name = ['id', 'width', 'height', 'x', 'y']
-            for i, arg in enumerate(args):
-                if i < len(args_name):
-                    setattr(self, args_name[i], arg)
+        Args:
+            *args: Variable length argument list containing the new values
+                   for the attributes in the following order: id, width,
+                   height, x, y.
+        """
+        args_name = ['id', 'width', 'height', 'x', 'y']
+        for i, arg in enumerate(args):
+            if i < len(args_name):
+                setattr(self, args_name[i], arg)
+
     @property
     def width(self):
         """
