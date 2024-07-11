@@ -54,5 +54,5 @@ class Square(Rectangle):
                 size (int): The size of the square.
 
         """
-        self.height = size
         self.width = size
+        self.height = size
