@@ -55,5 +55,8 @@ class Base:
         """
         file_name = f"{cls.__name__}.json"
         with open(file_name, "w") as file:
-            list_dicts = [o.to_dictionary() for o in list_objs]
+            if list_objs is None:
+                list_dicts = []
+            else:
+                list_dicts = [o.to_dictionary() for o in list_objs]
             file.write(Base.to_json_string(list_dicts))
